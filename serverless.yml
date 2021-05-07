@@ -1,0 +1,26 @@
+org: itpgroup0841
+app: itpgroup0841
+service:
+  name: medium-server
+
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region:  us-east-1
+  stage: dev
+
+functions:
+  app:
+    handler: src/serverless.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{any+}
+          method: ANY
