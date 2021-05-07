@@ -1,0 +1,10 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "codeway",
+  "password": "codeway",
+  "database": "codeway",
+  "synchronize": true,
+  "logging": true
+} 
