@@ -7,13 +7,13 @@ import {
   CreateDateColumn,
   OneToOne,
   JoinColumn,
-  ManyToOne
+  ManyToOne,
 } from 'typeorm';
 import User from './User';
 import Post from './Post';
 
-@Entity('random_name', {
-  synchronize: true
+@Entity('post_scores', {
+  synchronize: true,
 })
 export default class UserProfile {
   @PrimaryGeneratedColumn('uuid')
@@ -37,7 +37,7 @@ export default class UserProfile {
   updated_at!: Date;
 
   @Column('float8', {
-    default: 0
+    default: 0,
   })
   score!: number;
 
