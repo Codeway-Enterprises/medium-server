@@ -22,6 +22,9 @@ export default class Post {
   @Column('text')
   body!: string;
 
+  @Column('uuid')
+  fk_user_id!: string;
+
   @Column({ length: 255, nullable: true })
   thumbnail!: string;
 

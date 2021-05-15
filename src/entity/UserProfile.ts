@@ -24,6 +24,9 @@ export default class UserProfile {
   @Column({ length: 255, nullable: true })
   thumbnail!: string;
 
+  @Column('uuid')
+  fk_user_id!: string;
+
   @Column('timestampz')
   @CreateDateColumn()
   created_at!: Date;
